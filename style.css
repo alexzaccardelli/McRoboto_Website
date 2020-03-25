@@ -3,6 +3,7 @@
     color:#fff;
     float:right;
     font-family:"Bookman";
+    width: 100%;
 }
 #navbar ul {
     padding:0;
@@ -10,5 +11,6 @@
 }
 #navbar li {
     display:inline;
+    float: right;
     padding:20px;
 }
