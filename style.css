@@ -1,0 +1,14 @@
+#navbar {
+    background-color:#333;
+    color:#fff;
+    float:right;
+    font-family:"Bookman";
+}
+#navbar ul {
+    padding:0;
+    list-style:none;
+}
+#navbar li {
+    display:inline;
+    padding:20px;
+}
