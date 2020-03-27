@@ -1,8 +1,8 @@
 :root {
    --white: #F2F5F7;
-   --palePink: #F3EAEA;
+   --gray: #2D3142;
    --blue: #97C8EB;
-   --darkPink: #CC635F;
+   --darkPink: #F27979;
    --navy: #293366;
    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
 }
@@ -36,16 +36,20 @@
 
 /*Welcome Image Gallery*/
 .welcome {
+   grid-template-columns: 1fr;
    display: grid;
    grid-gap: 20px;
    grid-template-areas:
       'showcase'
       'location';
+   margin-bottom: 0;
+   justify-content: center;
 }
 .showcase {
    grid-area: showcase;
-   margin: 0 30px;
-   min-height: 450px;
+   width: auto;
+   // margin: 0 30px;
+   min-height: 700px;
    background-image: url(images/stateDesign.jpeg);
    background-size: cover;
    background-position: center;
@@ -57,6 +61,10 @@
    box-shadow: var(--shadow);
    color: var(--white);
 }
+.showcase img.resize {
+    width:100%; /* you can use % */
+    height: auto;
+}
 .showcase h1 {
    font-size: 3.5em;
    margin-bottom: 0;
@@ -66,19 +74,13 @@
    margin-top: 0;
 }
 .location {
-   display: grid;
-   grid-gap: 10px;
-   grid-template-columns: repeat(10, 1fr);
+   margin-top: 0;
+   color: var(--gray);
+   font-size: 1.5rem;
+   text-align: center;
 }
 .location i {
-   grid-column: 3/4;
-   text-align: right;
-}
-.location p {
-   text-align: start;
-   font-size: 2rem;
-   grid-column: 4/9;
-   margin-bottom: 0;
+   color: var(--darkPink);
 }
 .teams {
    text-align: center;
@@ -88,36 +90,82 @@ h2 {
    font-size: 3rem;
    margin-bottom: 20px;
    color: var(--darkPink);
+   text-align: center;
 }
 h3 {
    font-size: 2rem;
    margin-bottom: 0.5rem;
+   margin-top: 0.5rem;
 }
 .teamsGrid {
    display: grid;
    grid-template-columns: 1fr 1fr;
+   margin-bottom: 0;
 }
 .teamsGrid a{
    text-decoration: none;
+   color: var(--blue);
 }
 .teamsGrid a:hover{
    background-color: var(--blue);
    color: var(--white);
 }
 .teamsGrid a:visited{
-   color: var(--navy);
+   color: var(--gray);
 }
 .TeamA {
    grid-column: 1/2;
-   margin-top: 1rem;
-   margin-bottom: 0;
 }
 .TeamZ {
    grid-column: 2/3;
-   margin-top: 1rem;
-   margin-bottom: 0;
+}
+.allTeams {
+   padding: 1rem 2rem;
+   margin: 2rem;
+}
+.allTeams img {
+   height: 20rem;
+   box-shadow: var(--shadow);
 }
 .allTeams p{
    font-size: 1.5rem;
    margin-top: 0.5rem;
+   margin-bottom: 0;
+}
+.aboutGrid {
+   margin-top: 0;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   padding: 1rem;
+   grid-column-gap: 5%;
+   text-align: center;
+   color: var(--blue);
+}
+.aboutGrid h3 {
+   color: var(--blue);
+}
+.experience p {
+   text-align: left;
+}
+.community p {
+   text-align: left;
+}
+.aboutGrid p {
+   color: var(--gray);
+}
+footer {
+   background: var(--gray);
+   color: var(--white);
+   padding: 2rem;
+   font-size: 1.25rem;
+   text-align: center;
+}
+footer a {
+   text-decoration: none;
+}
+footer a:hover {
+   color: var(--darkPink);
+}
+footer a:visited {
+   color: var(--darkPink);
 }
