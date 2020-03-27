@@ -79,6 +79,23 @@
    font-size: 2rem;
    grid-column: 4/9;
 }
-.fa-poop {
-   color: var(--darkPink);
+.teams {
+   display:grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: 1fr 2fr;
+   grid-gap: 100px;
+   border-style: dashed;
+   text-align: center;
+}
+.meetOurTeams {
+   grid-column: 1/5;
+   grid-row: 1/2;
+}
+.TeamA {
+   grid-column: 1/3;
+   grid-row: 2/4;
+}
+.TeamZ {
+   grid-column: 3/5;
+   grid-row: 2/4;
 }
